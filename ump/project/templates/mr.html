@@ -2,11 +2,12 @@
 {% load humanize %}
 {% load qr_code %}
 
-<html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>pdf-html</title>
-<meta name="generator" content="BCL easyConverter SDK 5.0.252">
-<style type="text/css">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>pdf-html</title>
+    <meta name="generator" content="BCL easyConverter SDK 5.0.252">
+    <style type="text/css">
 
 body {
 margin-top: 0px;
@@ -124,221 +125,266 @@ text-align:center;
   margin-top:200px;
 }
 
-</style>
+
+    </style>
 </head>
 
 <body>
 <div class="relative">
     {%for x in info%}
     <img src="{{x.Logo.path}}" alt="" class="center">
-<p class="p0 ft0">Head Office:{{x.Address}} Phone: <nobr>{{x.Phone}},</nobr> <nobr>01730-7354652</nobr> Fax: <nobr>{{x.Fax}}</nobr> email:{{x.Email}} web:{{x.Web}}</p>
+    <p class="p0 ft0">Head Office:{{x.Address}} Phone:
+        <nobr>{{x.Phone}},</nobr>
+        <nobr>01730-7354652</nobr>
+        Fax:
+        <nobr>{{x.Fax}}</nobr>
+        email:{{x.Email}} web:{{x.Web}}
+    </p>
 
-<table cellpadding="0" cellspacing="0" class="t0">
-<tbody><tr>
-	<td class="tr0 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr0 td1"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr0 td2"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr0 td3"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr0 td4"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr0 td5"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr0 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr0 td6"><p class="p1 ft1">&nbsp;</p></td>
+    <table cellpadding="0" cellspacing="0" class="t0">
+        <tbody>
+        <tr>
+            <td class="tr0 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr0 td1"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr0 td2"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr0 td3"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr0 td4"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr0 td5"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr0 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr0 td6"><p class="p1 ft1">&nbsp;</p></td>
 
-	<td colspan="3" class="tr0 td7"><p class="p2 ft0">BIN : <nobr>{{x.Bin}}</nobr></p></td>
+            <td colspan="3" class="tr0 td7">
+                <p class="p2 ft0">BIN :
+                    <nobr>{{x.Bin}}</nobr>
+                </p>
+            </td>
 
-</tr>
- {%endfor%}
-<tr>
-	<td class="tr1 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr1 td1"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr1 td2"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr1 td3"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr1 td4"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr1 td5"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr1 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr1 td6"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="3" class="tr1 td7"><p class="p3 ft2">MONEY RECEIPT</p></td>
-</tr>
-{%for x in gf%}
-<tr>
-	<td class="tr2 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="3" class="tr2 td8"><p class="p1 ft0">Issuing Office</p></td>
-	<td class="tr2 td4"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="6" class="tr2 td9"><p class="p4 ft3">: {{x.Branch_name}}</p></td>
-</tr>
-<tr>
-	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="4" class="tr3 td10"><p class="p1 ft0">Money Receipt No</p></td>
-	<td colspan="6" class="tr3 td9"><p class="p4 ft3">: <nobr>{{x.Mr_No}}</nobr></p></td>
-</tr>
-<tr>
-	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="4" class="tr3 td10"><p class="p1 ft0">Class of Insurance</p></td>
-	<td class="tr3 td5"><p class="p4 ft3">: {{x.Class}}</p></td>
-	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr3 td6"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr3 td11"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr3 td12"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr3 td13"><p class="p5 ft3"><span class="ft0" style="color:black">Date</span>: <nobr>{{x.Date|date:'d-m-Y'}}</nobr>
-	</p></td>
-</tr>
-<tr>
-	<td class="tr4 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="5" class="tr4 td13"><p class="p1 ft0">Received with thanks from</p></td>
-	<td class="tr4 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="4" class="tr4 td14"><p class="p6 ft3">{{x.Bank_Name}} {{x.Bank_Address}}</p></td>
-</tr>
-<tr>
-	<td class="tr5 td0"><p class="p1 ft4">&nbsp;</p></td>
-	<td class="tr5 td1"><p class="p1 ft4">&nbsp;</p></td>
-	<td class="tr5 td2"><p class="p1 ft4">&nbsp;</p></td>
-	<td colspan="2" class="tr5 td15"><p class="p1 ft4">&nbsp;</p></td>
-	<td colspan="2" class="tr5 td16"><p class="p1 ft4">&nbsp;</p></td>
-	<td class="tr6 td17"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr6 td18"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr6 td19"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
-</tr>
-<tr>
-	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="10" class="tr3 td21"><p class="p1 ft3">{{x.Insured_Name}}, Prop: {{x.Insured_Address}}</p></td>
-</tr>
-<tr>
-	<td class="tr5 td0"><p class="p1 ft4">&nbsp;</p></td>
-	<td colspan="3" class="tr6 td22"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr6 td23"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr6 td24"><p class="p1 ft5">&nbsp;</p></td>
-	<td colspan="2" class="tr6 td25"><p class="p1 ft5">&nbsp;</p></td>
-	<td colspan="3" class="tr6 td26"><p class="p1 ft5">&nbsp;</p></td>
-</tr>
-<tr>
-	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="3" class="tr3 td8"><p class="p1 ft0">The sum of Tk.</p></td>
-	<td colspan="2" class="tr3 td27"><p class="p7 ft3">{{ x.Total_amount|intcomma }}</p></td>
-	<td colspan="5" class="tr3 td28"><p class="p1 ft3">({{x.inword}})</p></td>
-</tr>
-<tr>
-	<td class="tr6 td0"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr6 td1"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr6 td2"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr7 td29"><p class="p1 ft6">&nbsp;</p></td>
-	<td class="tr7 td23"><p class="p1 ft6">&nbsp;</p></td>
-	<td class="tr7 td24"><p class="p1 ft6">&nbsp;</p></td>
-	<td class="tr7 td30"><p class="p1 ft6">&nbsp;</p></td>
-	<td class="tr7 td17"><p class="p1 ft6">&nbsp;</p></td>
-	<td class="tr7 td18"><p class="p1 ft6">&nbsp;</p></td>
-	<td class="tr7 td19"><p class="p1 ft6">&nbsp;</p></td>
-	<td class="tr7 td20"><p class="p1 ft6">&nbsp;</p></td>
-</tr>
-<tr>
-	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="3" class="tr3 td8"><p class="p1 ft0">Mode of Payment</p></td>
-	<td class="tr3 td4"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr3 td5"><p class="p4 ft3">{{x.Mode_Of_Payment}}</p></td>
-	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr3 td6"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr3 td11"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="2" class="tr3 td31"><p class="p6 ft3"><span class="ft0" style="color:black;">Dated
-	</span><nobr>{{x.Date|date:'d-m-Y'}}</nobr></p></td>
-</tr>
-<tr>
-	<td class="tr5 td0"><p class="p1 ft4">&nbsp;</p></td>
-	<td colspan="4" class="tr5 td10"><p class="p1 ft4">&nbsp;</p></td>
-	<td colspan="3" class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr6 td18"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr5 td12"><p class="p1 ft4">&nbsp;</p></td>
-	<td class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
-</tr>
-<tr>
-	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="10" class="tr3 td21"><p class="p1 ft3"><span class="ft0" style="color:black;">Drawn on  </span>
-		 &nbsp; {{x.Bank_Name}}</p></td>
-</tr>
-<tr>
-	<td class="tr5 td0"><p class="p1 ft4">&nbsp;</p></td>
-	<td class="tr5 td1"><p class="p1 ft4">&nbsp;</p></td>
-	<td colspan="2" class="tr6 td32"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr6 td23"><p class="p1 ft5">&nbsp;</p></td>
-	<td colspan="3" class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr6 td18"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr6 td19"><p class="p1 ft5">&nbsp;</p></td>
-	<td class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
-</tr>
-<tr>
-	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
-	<td colspan="3" class="tr3 td8"><p class="p1 ft0">Issued against</p></td>
-	<td colspan="7" class="tr3 td33"><p class="p7 ft3"><nobr>{{x.Doc_No}}</nobr></p></td>
-</tr>
-<tr>
-	<td class="tr7 td0"><p class="p1 ft6">&nbsp;</p></td>
-	<td colspan="3" class="tr7 td8"><p class="p1 ft6">&nbsp;</p></td>
-	<td class="tr7 td4"><p class="p1 ft6">&nbsp;</p></td>
-	<td class="tr7 td5"><p class="p1 ft6">&nbsp;</p></td>
-	<td colspan="2" class="tr7 td10"><p class="p1 ft6">&nbsp;</p></td>
-	<td class="tr7 td11"><p class="p1 ft6">&nbsp;</p></td>
-	<td class="tr7 td12"><p class="p1 ft6">&nbsp;</p></td>
-	<td class="tr7 td13"><p class="p1 ft6">&nbsp;</p></td>
-</tr>
+        </tr>
+        {%endfor%}
+        <tr>
+            <td class="tr1 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr1 td1"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr1 td2"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr1 td3"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr1 td4"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr1 td5"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr1 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr1 td6"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="3" class="tr1 td7"><p class="p3 ft2">MONEY RECEIPT</p></td>
+        </tr>
+        {%for x in gf%}
+        <tr>
+            <td class="tr2 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="3" class="tr2 td8"><p class="p1 ft0">Issuing Office</p></td>
+            <td class="tr2 td4"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="6" class="tr2 td9"><p class="p4 ft3">: {{x.Branch_name}}</p></td>
+        </tr>
+        <tr>
+            <td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="4" class="tr3 td10"><p class="p1 ft0">Money Receipt No</p></td>
+            <td colspan="6" class="tr3 td9">
+                <p class="p4 ft3">:
+                    <nobr>{{x.Mr_No}}</nobr>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="4" class="tr3 td10"><p class="p1 ft0">Class of Insurance</p></td>
+            <td class="tr3 td5"><p class="p4 ft3">: {{x.Class}}</p></td>
+            <td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr3 td6"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr3 td11"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr3 td12"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr3 td13">
+                <p class="p5 ft3"><span class="ft0" style="color:black">Date</span>:
+                    <nobr>{{x.Date|date:'d-m-Y'}}</nobr>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="tr4 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="5" class="tr4 td13"><p class="p1 ft0">Received with thanks from</p></td>
+            <td class="tr4 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="4" class="tr4 td14"><p class="p6 ft3">{{x.Bank_Name}} {{x.Bank_Address}}</p></td>
+        </tr>
+        <tr>
+            <td class="tr5 td0"><p class="p1 ft4">&nbsp;</p></td>
+            <td class="tr5 td1"><p class="p1 ft4">&nbsp;</p></td>
+            <td class="tr5 td2"><p class="p1 ft4">&nbsp;</p></td>
+            <td colspan="2" class="tr5 td15"><p class="p1 ft4">&nbsp;</p></td>
+            <td colspan="2" class="tr5 td16"><p class="p1 ft4">&nbsp;</p></td>
+            <td class="tr6 td17"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr6 td18"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr6 td19"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
+        </tr>
+        <tr>
+            <td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="10" class="tr3 td21"><p class="p1 ft3">{{x.Insured_Name}}, Prop: {{x.Insured_Address}}</p></td>
+        </tr>
+        <tr>
+            <td class="tr5 td0"><p class="p1 ft4">&nbsp;</p></td>
+            <td colspan="3" class="tr6 td22"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr6 td23"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr6 td24"><p class="p1 ft5">&nbsp;</p></td>
+            <td colspan="2" class="tr6 td25"><p class="p1 ft5">&nbsp;</p></td>
+            <td colspan="3" class="tr6 td26"><p class="p1 ft5">&nbsp;</p></td>
+        </tr>
+        <tr>
+            <td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="3" class="tr3 td8"><p class="p1 ft0">The sum of Tk.</p></td>
+            <td colspan="2" class="tr3 td27"><p class="p7 ft3">{{ x.Total_amount|intcomma }}</p></td>
+            <td colspan="5" class="tr3 td28"><p class="p1 ft3">({{x.inword}})</p></td>
+        </tr>
+        <tr>
+            <td class="tr6 td0"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr6 td1"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr6 td2"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr7 td29"><p class="p1 ft6">&nbsp;</p></td>
+            <td class="tr7 td23"><p class="p1 ft6">&nbsp;</p></td>
+            <td class="tr7 td24"><p class="p1 ft6">&nbsp;</p></td>
+            <td class="tr7 td30"><p class="p1 ft6">&nbsp;</p></td>
+            <td class="tr7 td17"><p class="p1 ft6">&nbsp;</p></td>
+            <td class="tr7 td18"><p class="p1 ft6">&nbsp;</p></td>
+            <td class="tr7 td19"><p class="p1 ft6">&nbsp;</p></td>
+            <td class="tr7 td20"><p class="p1 ft6">&nbsp;</p></td>
+        </tr>
+        <tr>
+            <td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="3" class="tr3 td8"><p class="p1 ft0">Mode of Payment</p></td>
+            <td class="tr3 td4"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr3 td5"><p class="p4 ft3">{{x.Mode_Of_Payment}}</p></td>
+            <td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr3 td6"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr3 td11"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="2" class="tr3 td31">
+                <p class="p6 ft3"><span class="ft0" style="color:black;">Dated
+	</span>
+                    <nobr>{{x.Date|date:'d-m-Y'}}</nobr>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="tr5 td0"><p class="p1 ft4">&nbsp;</p></td>
+            <td colspan="4" class="tr5 td10"><p class="p1 ft4">&nbsp;</p></td>
+            <td colspan="3" class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr6 td18"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr5 td12"><p class="p1 ft4">&nbsp;</p></td>
+            <td class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
+        </tr>
+        <tr>
+            <td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="10" class="tr3 td21"><p class="p1 ft3"><span class="ft0" style="color:black;">Drawn on  </span>
+                &nbsp; {{x.Bank_Name}}</p></td>
+        </tr>
+        <tr>
+            <td class="tr5 td0"><p class="p1 ft4">&nbsp;</p></td>
+            <td class="tr5 td1"><p class="p1 ft4">&nbsp;</p></td>
+            <td colspan="2" class="tr6 td32"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr6 td23"><p class="p1 ft5">&nbsp;</p></td>
+            <td colspan="3" class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr6 td18"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr6 td19"><p class="p1 ft5">&nbsp;</p></td>
+            <td class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
+        </tr>
+        <tr>
+            <td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="3" class="tr3 td8"><p class="p1 ft0">Issued against</p></td>
+            <td colspan="7" class="tr3 td33">
+                <p class="p7 ft3">
+                    <nobr>{{x.Doc_No}}</nobr>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="tr7 td0"><p class="p1 ft6">&nbsp;</p></td>
+            <td colspan="3" class="tr7 td8"><p class="p1 ft6">&nbsp;</p></td>
+            <td class="tr7 td4"><p class="p1 ft6">&nbsp;</p></td>
+            <td class="tr7 td5"><p class="p1 ft6">&nbsp;</p></td>
+            <td colspan="2" class="tr7 td10"><p class="p1 ft6">&nbsp;</p></td>
+            <td class="tr7 td11"><p class="p1 ft6">&nbsp;</p></td>
+            <td class="tr7 td12"><p class="p1 ft6">&nbsp;</p></td>
+            <td class="tr7 td13"><p class="p1 ft6">&nbsp;</p></td>
+        </tr>
 
-<tr>
-	<td class="tr3 td30"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr3 td34"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr3 td35"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr8 td36"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr8 td37"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr8 td38"><p class="p1 ft1">&nbsp;</p></td>
-	<td class="tr8 td39"><p class="p1 ft1">&nbsp;</p></td>
+        <tr>
+            <td class="tr3 td30"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr3 td34"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr3 td35"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr8 td36"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr8 td37"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr8 td38"><p class="p1 ft1">&nbsp;</p></td>
+            <td class="tr8 td39"><p class="p1 ft1">&nbsp;</p></td>
 
-	<td colspan="4"  class="tr3 td41"><p class="p1 ft1">&nbsp;</p></td>
+            <td colspan="4" class="tr3 td41"><p class="p1 ft1">&nbsp;</p></td>
 
-	</tr>
-</tbody></table>
+        </tr>
+        </tbody>
+    </table>
 
-	<table>
-		<tbody>
+    <table>
+        <tbody>
 
-		<tr>
-			<td class="tr3 td8" style="border:1px solid black;"><p class="p1 ft0" > &nbsp;&nbsp;&nbsp;Premium</p></td>
-			<td class="tr3 td4" style=" border-bottom:1px solid black;"><p class="p4 ft0">Tk.</p></td>
-			<td class="tr3 td46" style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black;"><p class="p8 ft3">{{x.Premium|intcomma}}</p></td>
-			<td rowspan="5" style="text-align:right; width:400px; height:400px;">{% qr_from_text urls_name size=38 image_format="png" %}</td>
+        <tr>
+            <td class="tr3 td8" style="border:1px solid black;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;Premium</p></td>
+            <td class="tr3 td4" style=" border-bottom:1px solid black;"><p class="p4 ft0">Tk.</p></td>
+            <td class="tr3 td46"
+                style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black;"><p
+                    class="p8 ft3">{{x.Premium|intcomma}}</p></td>
+            <td rowspan="5" style="text-align:right; width:400px; height:400px;">{% qr_from_text urls_name size=38
+                image_format="png" %}
+            </td>
 
-		</tr>
-		<tr>
-			<td class="tr3 td8" style="border:1px solid black;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;VAT (15%)</p></td>
-			<td class="tr3 td5" style=" border-bottom:1px solid black;"><p class="p4 ft0">Tk.</p></td>
-			<td class="tr3 td46" style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black;"><p class="p8 ft3">{{x.Vat|intcomma}}</p></td>
-
-
-		</tr>
-		<tr>
-			<td class="tr3 td8" style="border:1px solid black;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;Stamp</p></td>
-			<td class="tr3 td5" style=" border-bottom:1px solid black;"><p class="p4 ft0">Tk.</p></td>
-			<td class="tr3 td46" style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black;"><p class="p8 ft3">{{x.Stamp|intcomma}}</p></td>
-		</tr>
-		<tr>
-			<td class="tr3 td8" style="border:1px solid black;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;Service Charge</p></td>
-			<td class="tr3 td5" style=" border-bottom:1px solid black;"><p class="p4 ft0">Tk.</p></td>
-			<td class="tr3 td46" style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black;"><p class="p8 ft3">{{x.ServiceCharge|intcomma}}</p></td>
-
-		</tr>
-		<tr>
-			<td class="tr3 td8" style="border:1px solid black;background-color:#C2C0C0;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;Total</p></td>
-			<td class="tr3 td5" style=" border-bottom:1px solid black;background-color:#C2C0C0;"><p class="p4 ft0">Tk.</p></td>
-			<td class="tr3 td46" style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black; background-color:#C2C0C0;"><p class="p8 ft3" style="color:black;">{{x.Total_amount|intcomma}}</p></td>
-		</tr>
-</tbody>
-	</table>
+        </tr>
+        <tr>
+            <td class="tr3 td8" style="border:1px solid black;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;VAT (15%)</p></td>
+            <td class="tr3 td5" style=" border-bottom:1px solid black;"><p class="p4 ft0">Tk.</p></td>
+            <td class="tr3 td46"
+                style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black;"><p
+                    class="p8 ft3">{{x.Vat|intcomma}}</p></td>
 
 
+        </tr>
+        <tr>
+            <td class="tr3 td8" style="border:1px solid black;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;Stamp</p></td>
+            <td class="tr3 td5" style=" border-bottom:1px solid black;"><p class="p4 ft0">Tk.</p></td>
+            <td class="tr3 td46"
+                style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black;"><p
+                    class="p8 ft3">{{x.Stamp|intcomma}}</p></td>
+        </tr>
+        <tr>
+            <td class="tr3 td8" style="border:1px solid black;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;Service Charge</p>
+            </td>
+            <td class="tr3 td5" style=" border-bottom:1px solid black;"><p class="p4 ft0">Tk.</p></td>
+            <td class="tr3 td46"
+                style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black;"><p
+                    class="p8 ft3">{{x.ServiceCharge|intcomma}}</p></td>
 
-{%endfor%}
+        </tr>
+        <tr>
+            <td class="tr3 td8" style="border:1px solid black;background-color:#C2C0C0;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;Total</p>
+            </td>
+            <td class="tr3 td5" style=" border-bottom:1px solid black;background-color:#C2C0C0;"><p class="p4 ft0">
+                Tk.</p></td>
+            <td class="tr3 td46"
+                style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black; background-color:#C2C0C0;">
+                <p class="p8 ft3" style="color:black;">{{x.Total_amount|intcomma}}</p></td>
+        </tr>
+        </tbody>
+    </table>
 
-<p class="p9 ft7">This RECEIPT is computer generated, authorized signature is not required.</p>
-<p class="p10 ft8" style="background-color:#C2C0C0">Receipt valid subject to encashment of cheque/P.O./D.D.</p>
-<p class="p11 ft9">* Note: If have any complain about Insurance, call +8802 <nobr>41051381-84.</nobr></p>
+
+    {%endfor%}
+
+    <p class="p9 ft7">This RECEIPT is computer generated, authorized signature is not required.</p>
+    <p class="p10 ft8" style="background-color:#C2C0C0">Receipt valid subject to encashment of cheque/P.O./D.D.</p>
+    <p class="p11 ft9">* Note: If have any complain about Insurance, call +8802
+        <nobr>41051381-84.</nobr>
+    </p>
 
 </div>
 
 
-</body></html>
+</body>
+</html>
