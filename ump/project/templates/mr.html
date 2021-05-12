@@ -1,0 +1,344 @@
+{% load static %}
+{% load humanize %}
+{% load qr_code %}
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>pdf-html</title>
+<meta name="generator" content="BCL easyConverter SDK 5.0.252">
+<style type="text/css">
+
+body {
+margin-top: 0px;
+margin-left: 0px;
+}
+
+
+
+
+.dclr {clear:both;float:none;height:1px;margin:0px;padding:0px;overflow:hidden;}
+
+.ft0{font: 13px 'Helvetica';line-height: 16px;}
+.ft1{font: 1px 'Helvetica';line-height: 1px;}
+.ft2{font: 16px 'Helvetica';line-height: 18px;}
+.ft3{font: 13px 'Helvetica';color: #6c757d;line-height: 16px;}
+.ft4{font: 1px 'Helvetica';line-height: 7px;}
+.ft5{font: 1px 'Helvetica';line-height: 6px;}
+.ft6{font: 1px 'Helvetica';line-height: 5px;}
+.ft7{font: bold 12px 'Helvetica';color: #6c757d;line-height: 15px;}
+.ft8{font: 12px 'Helvetica';line-height: 15px;}
+.ft9{font: 12px 'Helvetica';color: #ff0703;line-height: 15px;}
+
+.p0{text-align: center;padding-left: 130px;padding-right: 107px;margin-bottom: 0px;}
+.p1{text-align: left;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p2{text-align: left;padding-left: 117px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p3{text-align: left;padding-left: 5px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p4{text-align: left;padding-left: 6px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p5{text-align: left;padding-left: 52px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p6{text-align: left;padding-left: 7px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p7{text-align: left;padding-left: 1px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p8{text-align: right;padding-right: 6px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p9{text-align: left;padding-left: 157px;margin-top: 16px;margin-bottom: 0px;}
+.p10{text-align: left;padding-left: 219px;margin-top: 10px;margin-bottom: 0px;}
+.p11{text-align: left;padding-left: 1px;margin-top: 9px;margin-bottom: 0px;}
+
+.td0{padding: 0px;margin: 0px;width: 14px;vertical-align: bottom;}
+.td1{padding: 0px;margin: 0px;width: 73px;vertical-align: bottom;}
+.td2{padding: 0px;margin: 0px;width: 27px;vertical-align: bottom;}
+.td3{padding: 0px;margin: 0px;width: 6px;vertical-align: bottom;}
+.td4{padding: 0px;margin: 0px;width: 15px;vertical-align: bottom;}
+.td5{padding: 0px;margin: 0px;width: 45px;vertical-align: bottom;}
+.td6{padding: 0px;margin: 0px;width: 107px;vertical-align: bottom;}
+.td7{padding: 0px;margin: 0px;width: 426px;vertical-align: bottom;}
+.td8{padding: 0px;margin: 0px;width: 106px;vertical-align: bottom;}
+.td9{padding: 0px;margin: 0px;width: 592px;vertical-align: bottom;}
+.td10{padding: 0px;margin: 0px;width: 121px;vertical-align: bottom;}
+.td11{padding: 0px;margin: 0px;width: 206px;vertical-align: bottom;}
+.td12{padding: 0px;margin: 0px;width: 54px;vertical-align: bottom;}
+.td13{padding: 0px;margin: 0px;width: 166px;vertical-align: bottom;}
+.td14{padding: 0px;margin: 0px;width: 533px;vertical-align: bottom;}
+.td15{padding: 0px;margin: 0px;width: 21px;vertical-align: bottom;}
+.td16{padding: 0px;margin: 0px;width: 59px;vertical-align: bottom;}
+.td17{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 107px;vertical-align: bottom;}
+.td18{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 206px;vertical-align: bottom;}
+.td19{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 54px;vertical-align: bottom;}
+.td20{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 166px;vertical-align: bottom;}
+.td21{padding: 0px;margin: 0px;width: 713px;vertical-align: bottom;}
+.td22{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 106px;vertical-align: bottom;}
+.td23{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 15px;vertical-align: bottom;}
+.td24{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 45px;vertical-align: bottom;}
+.td25{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 121px;vertical-align: bottom;}
+.td26{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 426px;vertical-align: bottom;}
+.td27{padding: 0px;margin: 0px;width: 60px;vertical-align: bottom;}
+.td28{padding: 0px;margin: 0px;width: 547px;vertical-align: bottom;}
+.td29{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 6px;vertical-align: bottom;}
+.td30{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 14px;vertical-align: bottom;}
+.td31{padding: 0px;margin: 0px;width: 220px;vertical-align: bottom;}
+.td32{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 33px;vertical-align: bottom;}
+.td33{padding: 0px;margin: 0px;width: 607px;vertical-align: bottom;}
+.td34{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 73px;vertical-align: bottom;}
+.td35{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 27px;vertical-align: bottom;}
+.td36{border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 6px;vertical-align: bottom;}
+.td37{border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 15px;vertical-align: bottom;}
+.td38{border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 45px;vertical-align: bottom;}
+.td39{border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 14px;vertical-align: bottom;}
+.td40{border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 107px;vertical-align: bottom;}
+.td41{border-top: #000000 1px solid;padding: 0px;margin: 0px;width: 206px;vertical-align: bottom;}
+.td42{border-top: #000000 1px solid;padding: 0px;margin: 0px;width: 804px;vertical-align: bottom;}
+.td43{border-top: #000000 1px solid;padding: 0px;margin: 0px;width: 166px;vertical-align: bottom;}
+.td44{border-left: #000000 1px solid;padding: 0px;margin: 0px;width: 13px;vertical-align: bottom;}
+.td45{border-right: #000000 1px solid;padding: 0px;margin: 0px;width: 14px;vertical-align: bottom;}
+.td46{border-right: #000000 1px solid;padding: 0px;margin: 0px;width: 120px;vertical-align: bottom;}
+.td47{border-left: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 13px;vertical-align: bottom;}
+.td48{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 14px;vertical-align: bottom;}
+.td49{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 120px;vertical-align: bottom;}
+.td50{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 106px;vertical-align: bottom;}
+.td51{border-left: #000000 1px solid;padding: 0px;margin: 0px;width: 13px;vertical-align: bottom;background: #c2c0c0;}
+.td52{padding: 0px;margin: 0px;width: 106px;vertical-align: bottom;background: #c2c0c0;}
+.td53{border-right: #000000 1px solid;padding: 0px;margin: 0px;width: 14px;vertical-align: bottom;background: #c2c0c0;}
+.td54{padding: 0px;margin: 0px;width: 45px;vertical-align: bottom;background: #c2c0c0;}
+.td55{border-right: #000000 1px solid;padding: 0px;margin: 0px;width: 120px;vertical-align: bottom;background: #c2c0c0;}
+.td56{border-left: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 13px;vertical-align: bottom;background: #c2c0c0;}
+.td57{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 73px;vertical-align: bottom;background: #c2c0c0;}
+.td58{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 27px;vertical-align: bottom;background: #c2c0c0;}
+.td59{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 6px;vertical-align: bottom;background: #c2c0c0;}
+.td60{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 14px;vertical-align: bottom;background: #c2c0c0;}
+.td61{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 45px;vertical-align: bottom;background: #c2c0c0;}
+.td62{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 14px;vertical-align: bottom;background: #c2c0c0;}
+.td63{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 106px;vertical-align: bottom;background: #c2c0c0;}
+
+.tr0{height: 21px;}
+.tr1{height: 26px;}
+.tr2{height: 62px;}
+.tr3{height: 27.5px;}
+.tr4{height: 31px;}
+.tr5{height: 7px;}
+.tr6{height: 6px;}
+.tr7{height: 5px;}
+.tr8{height: 19px;}
+
+.t0{width: 727px;margin-top: 24px;font: 13px 'Helvetica';}
+.center {
+text-align:center;
+  width: 200px;
+  margin-top:200px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="relative">
+    {%for x in info%}
+    <img src="{{x.Logo.path}}" alt="" class="center">
+<p class="p0 ft0">Head Office:{{x.Address}} Phone: <nobr>{{x.Phone}},</nobr> <nobr>01730-7354652</nobr> Fax: <nobr>{{x.Fax}}</nobr> email:{{x.Email}} web:{{x.Web}}</p>
+
+<table cellpadding="0" cellspacing="0" class="t0">
+<tbody><tr>
+	<td class="tr0 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr0 td1"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr0 td2"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr0 td3"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr0 td4"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr0 td5"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr0 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr0 td6"><p class="p1 ft1">&nbsp;</p></td>
+
+	<td colspan="3" class="tr0 td7"><p class="p2 ft0">BIN : <nobr>{{x.Bin}}</nobr></p></td>
+
+</tr>
+ {%endfor%}
+<tr>
+	<td class="tr1 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr1 td1"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr1 td2"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr1 td3"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr1 td4"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr1 td5"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr1 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr1 td6"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="3" class="tr1 td7"><p class="p3 ft2">MONEY RECEIPT</p></td>
+</tr>
+{%for x in gf%}
+<tr>
+	<td class="tr2 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="3" class="tr2 td8"><p class="p1 ft0">Issuing Office</p></td>
+	<td class="tr2 td4"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="6" class="tr2 td9"><p class="p4 ft3">: {{x.Branch_name}}</p></td>
+</tr>
+<tr>
+	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="4" class="tr3 td10"><p class="p1 ft0">Money Receipt No</p></td>
+	<td colspan="6" class="tr3 td9"><p class="p4 ft3">: <nobr>{{x.Mr_No}}</nobr></p></td>
+</tr>
+<tr>
+	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="4" class="tr3 td10"><p class="p1 ft0">Class of Insurance</p></td>
+	<td class="tr3 td5"><p class="p4 ft3">: {{x.Class}}</p></td>
+	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr3 td6"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr3 td11"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr3 td12"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr3 td13"><p class="p5 ft3"><span class="ft0" style="color:black">Date</span>: <nobr>{{x.Date|date:'d-m-Y'}}</nobr>
+	</p></td>
+</tr>
+<tr>
+	<td class="tr4 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="5" class="tr4 td13"><p class="p1 ft0">Received with thanks from</p></td>
+	<td class="tr4 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="4" class="tr4 td14"><p class="p6 ft3">{{x.Bank_Name}} {{x.Bank_Address}}</p></td>
+</tr>
+<tr>
+	<td class="tr5 td0"><p class="p1 ft4">&nbsp;</p></td>
+	<td class="tr5 td1"><p class="p1 ft4">&nbsp;</p></td>
+	<td class="tr5 td2"><p class="p1 ft4">&nbsp;</p></td>
+	<td colspan="2" class="tr5 td15"><p class="p1 ft4">&nbsp;</p></td>
+	<td colspan="2" class="tr5 td16"><p class="p1 ft4">&nbsp;</p></td>
+	<td class="tr6 td17"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr6 td18"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr6 td19"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
+</tr>
+<tr>
+	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="10" class="tr3 td21"><p class="p1 ft3">{{x.Insured_Name}}, Prop: {{x.Insured_Address}}</p></td>
+</tr>
+<tr>
+	<td class="tr5 td0"><p class="p1 ft4">&nbsp;</p></td>
+	<td colspan="3" class="tr6 td22"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr6 td23"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr6 td24"><p class="p1 ft5">&nbsp;</p></td>
+	<td colspan="2" class="tr6 td25"><p class="p1 ft5">&nbsp;</p></td>
+	<td colspan="3" class="tr6 td26"><p class="p1 ft5">&nbsp;</p></td>
+</tr>
+<tr>
+	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="3" class="tr3 td8"><p class="p1 ft0">The sum of Tk.</p></td>
+	<td colspan="2" class="tr3 td27"><p class="p7 ft3">{{ x.Total_amount|intcomma }}</p></td>
+	<td colspan="5" class="tr3 td28"><p class="p1 ft3">({{x.inword}})</p></td>
+</tr>
+<tr>
+	<td class="tr6 td0"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr6 td1"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr6 td2"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr7 td29"><p class="p1 ft6">&nbsp;</p></td>
+	<td class="tr7 td23"><p class="p1 ft6">&nbsp;</p></td>
+	<td class="tr7 td24"><p class="p1 ft6">&nbsp;</p></td>
+	<td class="tr7 td30"><p class="p1 ft6">&nbsp;</p></td>
+	<td class="tr7 td17"><p class="p1 ft6">&nbsp;</p></td>
+	<td class="tr7 td18"><p class="p1 ft6">&nbsp;</p></td>
+	<td class="tr7 td19"><p class="p1 ft6">&nbsp;</p></td>
+	<td class="tr7 td20"><p class="p1 ft6">&nbsp;</p></td>
+</tr>
+<tr>
+	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="3" class="tr3 td8"><p class="p1 ft0">Mode of Payment</p></td>
+	<td class="tr3 td4"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr3 td5"><p class="p4 ft3">{{x.Mode_Of_Payment}}</p></td>
+	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr3 td6"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr3 td11"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="2" class="tr3 td31"><p class="p6 ft3"><span class="ft0" style="color:black;">Dated
+	</span><nobr>{{x.Date|date:'d-m-Y'}}</nobr></p></td>
+</tr>
+<tr>
+	<td class="tr5 td0"><p class="p1 ft4">&nbsp;</p></td>
+	<td colspan="4" class="tr5 td10"><p class="p1 ft4">&nbsp;</p></td>
+	<td colspan="3" class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr6 td18"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr5 td12"><p class="p1 ft4">&nbsp;</p></td>
+	<td class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
+</tr>
+<tr>
+	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="10" class="tr3 td21"><p class="p1 ft3"><span class="ft0" style="color:black;">Drawn on  </span>
+		 &nbsp; {{x.Bank_Name}}</p></td>
+</tr>
+<tr>
+	<td class="tr5 td0"><p class="p1 ft4">&nbsp;</p></td>
+	<td class="tr5 td1"><p class="p1 ft4">&nbsp;</p></td>
+	<td colspan="2" class="tr6 td32"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr6 td23"><p class="p1 ft5">&nbsp;</p></td>
+	<td colspan="3" class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr6 td18"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr6 td19"><p class="p1 ft5">&nbsp;</p></td>
+	<td class="tr6 td20"><p class="p1 ft5">&nbsp;</p></td>
+</tr>
+<tr>
+	<td class="tr3 td0"><p class="p1 ft1">&nbsp;</p></td>
+	<td colspan="3" class="tr3 td8"><p class="p1 ft0">Issued against</p></td>
+	<td colspan="7" class="tr3 td33"><p class="p7 ft3"><nobr>{{x.Doc_No}}</nobr></p></td>
+</tr>
+<tr>
+	<td class="tr7 td0"><p class="p1 ft6">&nbsp;</p></td>
+	<td colspan="3" class="tr7 td8"><p class="p1 ft6">&nbsp;</p></td>
+	<td class="tr7 td4"><p class="p1 ft6">&nbsp;</p></td>
+	<td class="tr7 td5"><p class="p1 ft6">&nbsp;</p></td>
+	<td colspan="2" class="tr7 td10"><p class="p1 ft6">&nbsp;</p></td>
+	<td class="tr7 td11"><p class="p1 ft6">&nbsp;</p></td>
+	<td class="tr7 td12"><p class="p1 ft6">&nbsp;</p></td>
+	<td class="tr7 td13"><p class="p1 ft6">&nbsp;</p></td>
+</tr>
+
+<tr>
+	<td class="tr3 td30"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr3 td34"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr3 td35"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr8 td36"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr8 td37"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr8 td38"><p class="p1 ft1">&nbsp;</p></td>
+	<td class="tr8 td39"><p class="p1 ft1">&nbsp;</p></td>
+
+	<td colspan="4"  class="tr3 td41"><p class="p1 ft1">&nbsp;</p></td>
+
+	</tr>
+</tbody></table>
+
+	<table>
+		<tbody>
+
+		<tr>
+			<td class="tr3 td8" style="border:1px solid black;"><p class="p1 ft0" > &nbsp;&nbsp;&nbsp;Premium</p></td>
+			<td class="tr3 td4" style=" border-bottom:1px solid black;"><p class="p4 ft0">Tk.</p></td>
+			<td class="tr3 td46" style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black;"><p class="p8 ft3">{{x.Premium|intcomma}}</p></td>
+			<td rowspan="5" style="text-align:right; width:400px; height:400px;">{% qr_from_text urls_name size=38 image_format="png" %}</td>
+
+		</tr>
+		<tr>
+			<td class="tr3 td8" style="border:1px solid black;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;VAT (15%)</p></td>
+			<td class="tr3 td5" style=" border-bottom:1px solid black;"><p class="p4 ft0">Tk.</p></td>
+			<td class="tr3 td46" style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black;"><p class="p8 ft3">{{x.Vat|intcomma}}</p></td>
+
+
+		</tr>
+		<tr>
+			<td class="tr3 td8" style="border:1px solid black;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;Stamp</p></td>
+			<td class="tr3 td5" style=" border-bottom:1px solid black;"><p class="p4 ft0">Tk.</p></td>
+			<td class="tr3 td46" style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black;"><p class="p8 ft3">{{x.Stamp|intcomma}}</p></td>
+		</tr>
+		<tr>
+			<td class="tr3 td8" style="border:1px solid black;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;Service Charge</p></td>
+			<td class="tr3 td5" style=" border-bottom:1px solid black;"><p class="p4 ft0">Tk.</p></td>
+			<td class="tr3 td46" style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black;"><p class="p8 ft3">{{x.ServiceCharge|intcomma}}</p></td>
+
+		</tr>
+		<tr>
+			<td class="tr3 td8" style="border:1px solid black;background-color:#C2C0C0;"><p class="p1 ft0"> &nbsp;&nbsp;&nbsp;Total</p></td>
+			<td class="tr3 td5" style=" border-bottom:1px solid black;background-color:#C2C0C0;"><p class="p4 ft0">Tk.</p></td>
+			<td class="tr3 td46" style="border-top:1px solid black; border-right:1px solid black; border-bottom:1px solid black; background-color:#C2C0C0;"><p class="p8 ft3" style="color:black;">{{x.Total_amount|intcomma}}</p></td>
+		</tr>
+</tbody>
+	</table>
+
+
+
+{%endfor%}
+
+<p class="p9 ft7">This RECEIPT is computer generated, authorized signature is not required.</p>
+<p class="p10 ft8" style="background-color:#C2C0C0">Receipt valid subject to encashment of cheque/P.O./D.D.</p>
+<p class="p11 ft9">* Note: If have any complain about Insurance, call +8802 <nobr>41051381-84.</nobr></p>
+
+</div>
+
+
+</body></html>

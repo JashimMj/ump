@@ -1,0 +1,44 @@
+{%extends 'index.html'%}
+
+{%block contant%}
+<div class="card">
+  <div class="card-body">
+    <nav class="navbar navbar-light bg-light">
+  <form class="form-inline my-2 my-lg-0" action="{%url 'search'%}" method="post">
+    {%csrf_token%}
+      <input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search" name="sea">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+  </div>
+</div>
+ {{a}}
+<div class="card">
+  <div class="card-body">
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">MR</th>
+      <th scope="col">Insured Name</th>
+      <th scope="col">Insured Address</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%for x in dds%}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{x.Mr_No}}</td>
+      <td>{{x.Insured_Name}}</td>
+      <td>{{x.Insured_Address}}</td>
+      <td>{{x.Insured_Address}}</td>
+      <td><a href="{%url 'mr' x.id%}" class="btn btn-warning"> PRINT</a></td>
+
+    </tr>
+  {%endfor%}
+  </tbody>
+</table>
+  </div>
+</div>
+
+{%endblock%}

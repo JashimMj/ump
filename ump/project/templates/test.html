@@ -1,0 +1,59 @@
+{%extends 'index.html'%}
+{%block contant%}
+<div class="row">
+    <div class="col md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Company Information</h5>
+                <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
+            </div>
+            <div class="card-block">
+                <form class="form-material" action="{%url 'tetcreate'%}" method="post" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    <div class="form-group form-default">
+                        <input type="text" name="name" class="form-control">
+                        <span class="form-bar"></span>
+                        <label class="float-label">Company Name</label>
+                    </div>
+                    <div class="form-group form-default">
+                        <textarea name="address" class="form-control" placeholder="Company Address"></textarea>
+                    </div>
+
+                    <div class="form-group form-default">
+                        <input type="text" name="email" class="form-control">
+                        <span class="form-bar"></span>
+                        <label class="float-label">Company Email</label>
+                    </div>
+                    <div class="form-group form-default">
+                        <input type="text" name="phone" class="form-control">
+                        <span class="form-bar"></span>
+                        <label class="float-label">Company Phone</label>
+                    </div>
+                    <div class="form-group form-default">
+                        <input type="text" name="fax" class="form-control">
+                        <span class="form-bar"></span>
+                        <label class="float-label">Company Fax</label>
+                    </div>
+                    <div class="form-group form-default">
+                        <input type="text" name="web" class="form-control">
+                        <span class="form-bar"></span>
+                        <label class="float-label">Company WebSite</label>
+                    </div>
+
+                    <div class="form-group form-default">
+                        <input type="file" class="form-control" name="logo">
+                    </div>
+                    <div class="form-group form-default">
+                        <input type="submit" class="btn waves-effect waves-light btn-primary btn-outline-primary">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col md-3"></div>
+
+</div>
+
+{%endblock%}
